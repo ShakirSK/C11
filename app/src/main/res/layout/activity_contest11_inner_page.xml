@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/coordinatorLayoutlogin"
+    android:background="#f2f2f2"
+>
+
+
+
+
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/dark"
+        app:contentInsetLeft="0dp"
+        app:contentInsetStart="0dp"
+        app:contentInsetStartWithNavigation="0dp"
+        android:layout_alignParentTop="true"
+        android:theme="@style/AppTheme.AppBarOverlay"
+        >
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:contentInsetLeft="0dp"
+            app:contentInsetStart="0dp"
+            app:titleTextColor="#ffffff"
+            app:title="CONTEST"
+            app:titleTextAppearance="@style/yourstyle"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:theme="@style/ToolbarColoredBackArrow">
+
+        </android.support.v7.widget.Toolbar>
+
+           <RelativeLayout
+               android:id="@+id/search_layout"
+               android:layout_width="match_parent"
+               android:layout_height="50dp"
+               android:layout_below="@+id/toolbar"
+               android:padding="7dp">
+
+               <LinearLayout
+                   android:id="@+id/searchView"
+                   android:layout_width="match_parent"
+                   android:layout_height="40dp"
+                   android:layout_alignParentBottom="true"
+                   android:background="#FFFFFF"
+                   android:layout_alignParentEnd="true"
+                   android:drawableLeft="@android:drawable/ic_menu_search"
+                   android:elevation="2dp"
+                   android:hint="Type some text...gfg"
+                   android:textColorHint="#000">
+
+                   <TextView
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:text="IND vs PAK"
+                       android:padding="10dp"
+                       android:layout_weight="2"
+                       android:textColor="#000000"/>
+
+                   <ImageView
+                       android:layout_width="@dimen/_12sdp"
+                       android:layout_height="@dimen/_12sdp"
+                       android:background="@drawable/alarmclock"
+                       android:padding="10dp"
+                       android:layout_gravity="center"
+                       android:textColor="#000000"/>
+
+                   <cn.iwgang.countdownview.CountdownView
+                       android:id="@+id/cv_countdownViewTest3"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_gravity="center_horizontal"
+                       app:isShowDay="false"
+                       app:isShowHour="true"
+                       app:isShowMillisecond="true"
+                       app:isShowMinute="true"
+                       app:suffixMinute="m"
+                       app:suffixHour="h"
+                       app:suffixSecond="s"
+                       android:padding="@dimen/_9sdp"
+                       app:isShowSecond="true"
+                       app:suffixGravity="center"
+                       app:suffixTextColor="#000000"
+                       app:suffixTextSize="12sp"
+                       app:timeTextColor="#000000"
+                       app:timeTextSize="12sp"/>
+
+                 <!--  <cn.iwgang.countdownview.CountdownView
+                       android:id="@+id/cv_countdownViewTest21"
+                       android:layout_width="wrap_content"
+                       android:layout_height="wrap_content"
+                       android:layout_gravity="center_horizontal"
+                       app:isHideTimeBackground="false"
+                       app:isShowDay="false"
+                       app:isShowHour="true"
+                       app:isShowMillisecond="true"
+                       app:isShowMinute="true"
+                       android:padding="@dimen/_5sdp"
+                       app:isShowSecond="true"
+                       app:suffixMinute="m"
+                       app:suffixHour="h"
+                       app:suffixSecond="s"
+                       app:isShowTimeBgDivisionLine="false"
+                       app:isTimeTextBold="true"
+                       app:suffixGravity="center"
+                       app:suffixTextColor="#000000"
+                       app:timeBgColor="#00000000"
+                       app:timeBgRadius="22.5dp"
+                       app:timeBgSize="28dp"
+                       app:timeTextColor="#000000"
+                       app:timeTextSize="10dp"/>-->
+
+               </LinearLayout>
+           </RelativeLayout>
+
+    </android.support.design.widget.AppBarLayout>
+
+
+    <include
+        layout="@layout/contestinnerinclude"
+        android:id="@+id/alllayoutfirst"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_weight="0.5"
+        android:elevation="30dp"
+        android:layout_gravity="bottom"
+        android:orientation="horizontal"
+        android:weightSum="2"
+        android:layout_alignParentBottom="true"
+        >
+
+        <TextView
+            android:id="@+id/btnBottomSheet"
+            android:layout_width="@dimen/_160sdp"
+            android:layout_height="match_parent"
+            android:background="#FFFFFF"
+            android:gravity="center"
+            android:text="MY TEAMS"
+            android:textColor="#000000"
+            android:textSize="14dp"
+            android:textStyle="bold" />
+
+
+        <TextView
+            android:id="@+id/wishlistedItem"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/dark"
+            android:gravity="center"
+            android:text="JOINED CONTESTS"
+            android:textColor="#ffffff"
+            android:textSize="14dp"
+            android:textStyle="bold"
+            />
+
+
+    </LinearLayout>
+
+
+</android.support.design.widget.CoordinatorLayout>

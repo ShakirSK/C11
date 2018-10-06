@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true">
+
+    <android.support.v4.widget.NestedScrollView
+        android:id="@+id/nest_scrollview"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:showIn="@layout/activity_main">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/layout2"
+            android:layout_below="@id/app_bar"
+            >
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <android.support.design.widget.TabLayout
+                    android:id="@+id/tab_layout1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#fff"
+                    app:elevation="0dp"
+                    app:tabGravity="fill"
+                    app:tabMaxWidth="0dp"
+                    app:tabIndicatorColor="#19191a"
+                    app:tabMode="fixed"
+                    app:tabSelectedTextColor="#19191a"
+                    app:tabTextColor="#b3b3b3" />
+
+
+                <!--  <include layout="@layout/activity_tab_activity_1"
+                      android:layout_width="match_parent"
+                      android:layout_height="match_parent"
+                      android:layout_below="@id/tab_layout1"/>-->
+
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/viewpagerfortabc"
+                    android:layout_below="@id/tab_layout1"
+                    android:layout_width="match_parent"
+                    android:layout_height="490dp"
+                    app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+            </RelativeLayout>
+        </RelativeLayout>
+
+
+
+    </android.support.v4.widget.NestedScrollView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+            <android.support.design.widget.BottomNavigationView
+                android:id="@+id/navigation"
+                android:visibility="visible"
+                android:layout_alignParentBottom="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:foregroundGravity="bottom"
+                android:background="#ffffff"
+                android:layout_gravity="bottom"
+                app:itemBackground="@color/white"
+                app:itemIconTint="@drawable/nav_item_color_state"
+                app:itemTextColor="@drawable/nav_item_color_state"
+                app:menu="@menu/navigation" />
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/floatingActionButton"
+                android:layout_alignBottom="@id/navigation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:clickable="true"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                app:backgroundTint="@android:color/white"
+                app:borderWidth="0dp"
+                app:elevation="9dp"
+                android:layout_marginBottom="16dp"
+                android:src="@drawable/ic_cricket" />
+
+    </RelativeLayout>
+
+            <android.support.design.widget.AppBarLayout
+                android:id="@+id/app_bar"
+                android:layout_width="match_parent"
+                android:layout_height="190dp"
+                android:background="#19191a"
+                android:theme="@style/AppTheme.AppBarOverlay">
+
+            <android.support.design.widget.CollapsingToolbarLayout
+                android:id="@+id/toolbar_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fitsSystemWindows="true"
+                app:contentScrim="#19191a"
+                app:expandedTitleMarginEnd="64dp"
+                app:expandedTitleMarginStart="48dp"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed">
+
+                <android.support.v4.view.ViewPager
+                    android:id="@+id/pager"
+                    android:foregroundGravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"/>
+
+
+                <android.support.v7.widget.Toolbar
+                    android:id="@+id/toolbar"
+                    android:layout_below="@id/pager"
+                    android:layout_width="match_parent"
+                    android:layout_height="?android:attr/actionBarSize"
+                    android:minHeight="?android:attr/actionBarSize"
+                    app:layout_collapseMode="pin"
+                    app:layout_scrollFlags="scroll|exitUntilCollapsed"
+                    app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+
+            </android.support.design.widget.CollapsingToolbarLayout>
+    </android.support.design.widget.AppBarLayout>
+
+
+
+</android.support.design.widget.CoordinatorLayout>
